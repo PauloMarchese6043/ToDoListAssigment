@@ -21,15 +21,85 @@
     <title>ToDo List</title>
 </head>
 <body>
-    <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
-        <input type="text" data-theme="a" value="Text Input" class="input" data-form="ui-body-a" />
-        <button data-icon="star" data-theme="a" data-form="ui-btn-up-a" class=" ui-btn ui-btn-a ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all">Button</button>
-    </div>
-    <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
-        <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow"></ul>
+    <div class="ui-body ui-body-a ui-corner-all">
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a" style="width:80%">
+                <input type="text" data-clear-btn="true" name="id" placeholder="What do I still need to do?">
+            </div>
+            <div class="ui-block-b" style="width:20%">
+                <input type="button" data-iconpos="notext" data-icon="plus">
+            </div>
+        </fieldset>
     </div>
 
-    <!--<script type="text/javascript" src="cordova.js"></script>-->
+    <div data-role="collapsible" data-form="ui-body-a">
+        <h2>To Do</h2>
+        <ul id="pendingTasksList" data-role="listview" data-inset="true" data-filter="true">
+            <li>
+                <fieldset class="ui-grid-a">
+                    <label>Pick up John</label>
+                    <div class="ui-btn-right" data-wrap="true" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="check" data-theme="b">Add</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="b">Delete</a>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset class="ui-grid-a">
+                    <label>Homework</label>
+                    <div class="ui-btn-right" data-wrap="true" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="check" data-theme="b">Add</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="b">Delete</a>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset class="ui-grid-a">
+                    <label>Chores</label>
+                    <div class="ui-btn-right" data-wrap="true" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="check" data-theme="b">Add</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="b">Delete</a>
+                    </div>
+                </fieldset>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="collapsible" data-form="ui-body-a">
+        <h2>Done</h2>
+        <ul id="doneTasksList" data-role="listview" data-inset="true" data-filter="true">
+            <li>
+                <fieldset class="ui-grid-a">
+                    <del><label>Pick up John</label></del>
+                    <div class="ui-btn-right" data-wrap="true" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="back" data-theme="b">Back</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="b">Delete</a>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset class="ui-grid-a">
+                    <del><label>Homework</label></del>
+                    <div class="ui-btn-right" data-wrap="true" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="back" data-theme="b">Back</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="b">Delete</a>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset class="ui-grid-a">
+                    <del><label>abc</label></del>
+                    <div class="ui-btn-right" data-wrap="true" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="back" data-theme="b">Back</a>
+                        <a href="#" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="b">Delete</a>
+                    </div>
+                </fieldset>
+            </li>
+        </ul>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
